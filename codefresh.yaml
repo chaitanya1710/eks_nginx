@@ -22,7 +22,9 @@ steps:
     title: Deploying
     stage: deploy
     image: pulumi/pulumi
+    working_directory: ${{main_clone}}
     commands:
+      - ls
       - pulumi login
       - pulumi stack select dev --non-interactive
       - pulumi stack --non-interactive
