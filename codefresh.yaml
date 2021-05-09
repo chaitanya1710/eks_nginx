@@ -18,7 +18,7 @@ steps:
     git: "github"
     stage: "clone"
 
-  RunPulumi:k
+  RunPulumi:
     title: Deploying
     stage: deploy
     image: pulumi/pulumi
