@@ -21,7 +21,6 @@ steps:
   RunPulumi:
     title: Deploying
     stage: deploy
-    image: pulumi/pulumi
     working_directory: eks_nginx
     commands:
       - ls
