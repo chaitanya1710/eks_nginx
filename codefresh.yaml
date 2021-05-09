@@ -14,7 +14,7 @@ steps:
     repo: "chaitanya1710/eks_nginx"
     # CF_BRANCH value is auto set when pipeline is triggered
     # Learn more at codefresh.io/docs/docs/codefresh-yaml/variables/
-    revision: "${{CF_BRANCH}}"
+    revision: "master"
     git: "github"
     stage: "clone"
 
@@ -22,7 +22,7 @@ steps:
     title: Deploying
     stage: deploy
     image: pulumi/pulumi
-    working_directory: ${{main_clone}}
+    working_directory: eks_nginx
     commands:
       - ls
       - pulumi login
