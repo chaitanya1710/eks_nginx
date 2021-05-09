@@ -21,9 +21,11 @@ steps:
   RunPulumi:
     title: Deploying
     stage: deploy
+    image: pulumi/pulumi
     working_directory: eks_nginx
     commands:
       - ls
+      - yarn install
       - pulumi login
       - pulumi stack select dev
       - pulumi up --non-interactive --yes
