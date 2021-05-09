@@ -26,7 +26,7 @@ steps:
     commands:
       - ls
       - pulumi login
-      - pulumi stack select dev --non-interactive
-      - pulumi stack --non-interactive
-      - pulumi up --non-interactive
+      - pulumi stack select dev --non-interactive --yes
+      - pulumi stack --non-interactive --yes
+      - pulumi up --non-interactive --yes
 
